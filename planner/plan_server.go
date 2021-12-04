@@ -11,9 +11,9 @@ import (
 	"time"
 
 	u "github.com/araddon/gou"
-	etcdv3 "github.com/coreos/etcd/clientv3"
-	"github.com/lytics/grid"
+	"github.com/lytics/grid/v3"
 	"github.com/sony/sonyflake"
+	etcdv3 "go.etcd.io/etcd/client/v3"
 
 	"github.com/araddon/qlbridge/plan"
 	"github.com/araddon/qlbridge/schema"
