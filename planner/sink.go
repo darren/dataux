@@ -151,5 +151,4 @@ func (m *Sink) Run() error {
 
 		}
 	}
-	return nil
 }

@@ -38,7 +38,7 @@ func BuildSqlJob(ctx *plan.Context, pg *PlannerGrid) (*GridTask, error) {
 	}
 	taskRunner, ok := task.(exec.TaskRunner)
 	if !ok {
-		return nil, fmt.Errorf("Expected TaskRunner but was %T", task)
+		return nil, fmt.Errorf("expected TaskRunner but was %T", task)
 	}
 	job.RootTask = taskRunner
 	return job, err
