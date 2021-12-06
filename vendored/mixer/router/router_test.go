@@ -1,8 +1,9 @@
 package router
 
 import (
-	"github.com/dataux/dataux/models"
 	"testing"
+
+	"github.com/dataux/dataux/models"
 )
 
 func TestParseRule(t *testing.T) {
@@ -53,7 +54,8 @@ rules [
 		t.Fatalf("Should load config: %v", err)
 	}
 	ctx := models.NewServerCtx(conf)
-	rt, err := NewRouter(conf, ctx.Schema("test1"))
+	schema1, _ := ctx.Schema("test1")
+	rt, err := NewRouter(conf, schema1)
 	if err != nil {
 		t.Fatal(err)
 	}

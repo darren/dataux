@@ -14,8 +14,9 @@ import (
 	"github.com/araddon/qlbridge/plan"
 	"github.com/araddon/qlbridge/rel"
 	"github.com/araddon/qlbridge/schema"
+	"github.com/lytics/grid/v3"
 	"github.com/stretchr/testify/assert"
-	"go.etcd.io/etcd/client/v3"
+	clientv3 "go.etcd.io/etcd/client/v3"
 )
 
 var _ = u.EMPTY

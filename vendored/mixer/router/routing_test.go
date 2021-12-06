@@ -48,7 +48,8 @@ rules : {
 
 	var r *Router
 	ctx := models.NewServerCtx(conf)
-	r, err = NewRouter(conf, ctx.Schema("test1"))
+	schema1, _ := ctx.Schema("test1")
+	r, err = NewRouter(conf, schema1)
 	if err != nil {
 		println(err.Error())
 		panic(err)
